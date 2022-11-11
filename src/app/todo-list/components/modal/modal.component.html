@@ -1,0 +1,11 @@
+<div mat-dialog-content>
+  <p>Qual tarefa quer adicionar?</p>
+  <mat-form-field appearance="fill">
+    <mat-label>Nome tarefa</mat-label>
+    <input matInput [(ngModel)]="data.mensagem" (keyup.enter)="onNoClick(data.mensagem)" cdkFocusInitial>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancelar</button>
+  <button mat-button [mat-dialog-close]="data.mensagem">Ok</button>
+</div>
